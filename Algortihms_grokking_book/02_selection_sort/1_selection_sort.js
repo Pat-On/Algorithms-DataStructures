@@ -21,6 +21,11 @@ function findSmallestIndex(array) {
 console.log(findSmallestIndex([5, 3, 6, 2, 10]));
 
 // 2. Sort the array
+
+// !Important - space complexity
+// Other option is to swap the elements like was done in Udemy course
+// space complexity suffer in this case
+// but is there less operations?
 function selectionSort(array) {
   var sortedArray = [];
   var length = array.length;
