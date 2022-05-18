@@ -18,3 +18,6 @@ https://www.toptal.com/developers/sorting-algorithms
 https://visualgo.net/en/
 
 https://visualgo.net/en/sorting
+
+Big-O Cheat Sheet:
+https://www.bigocheatsheet.com/
