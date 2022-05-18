@@ -26,6 +26,8 @@ console.log(findSmallestIndex([5, 3, 6, 2, 10]));
 // Other option is to swap the elements like was done in Udemy course
 // space complexity suffer in this case
 // but is there less operations?
+
+// this one crating new array - not mutating
 function selectionSort(array) {
   var sortedArray = [];
   var length = array.length;
