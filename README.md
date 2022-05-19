@@ -11,7 +11,7 @@ https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/
 
 
 
-### Interesting Links from the course:
+## Interesting Links from the course:
 
 Algorithms animations:
 https://www.toptal.com/developers/sorting-algorithms
@@ -24,5 +24,5 @@ Big-O Cheat Sheet:
 https://www.bigocheatsheet.com/
 
 
-### Interesting Links from the Book
+## Interesting Links from the Book
 The Euclidean Algorithm https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
