@@ -24,5 +24,5 @@ Big-O Cheat Sheet:
 https://www.bigocheatsheet.com/
 
 
-## Interesting Links from the Book
+## Interesting Links from the Book:
 The Euclidean Algorithm https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
