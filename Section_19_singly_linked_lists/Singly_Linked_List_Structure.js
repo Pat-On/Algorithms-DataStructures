@@ -14,7 +14,21 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
-  push(val) {}
+  push(val) {
+    var newNode = new Node(val);
+    // when empty
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+      //   all other cases
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.length++;
+    // return entire list
+    return this;
+  }
 }
 
 // naive solution:
@@ -27,5 +41,13 @@ class SinglyLinkedList {
 var list = new SinglyLinkedList();
 list.push("HELLO");
 list.push("GOODBYE");
+list.push("Morning");
+list.push("Morning2");
+list.push("Morning3");
+list.push("Morning4");
 
-console.log(list.head);
+console.log(list.head.next.next); //morning
+console.log("*".repeat(40));
+console.log(list.head.next.next.next); //morning 2
+console.log("*".repeat(40));
+console.log(list);
