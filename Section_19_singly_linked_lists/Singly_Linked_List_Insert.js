@@ -11,6 +11,16 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
+  // method made just for the sake of practice
+  traverse() {
+    var current = this.head;
+    while (current) {
+      console.log(current.val);
+      // in the tail current.next is going to be null - return from loop
+      current = current.next;
+    }
+  }
+  // ************************************************************
   push(val) {
     var newNode = new Node(val);
     if (!this.head) {
@@ -61,17 +71,6 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
-
-  // method made just for the sake of practice
-  traverse() {
-    var current = this.head;
-    while (current) {
-      console.log(current.val);
-      // in the tail current.next is going to be null - return from loop
-      current = current.next;
-    }
-  }
-  // ************************************************************
   get(index) {
     if (index < 0 || index >= this.length) return null;
     var counter = 0;
@@ -83,27 +82,52 @@ class SinglyLinkedList {
     return current;
   }
   set(index, val) {
-    // by get node we are setting reference
     var foundNode = this.get(index);
     if (foundNode) {
-      // modify
       foundNode.val = val;
       return true;
     }
     return false;
   }
+  insert(index, val) {
+    // when number is out of the index scope
+    if (index < 0 || index > this.length) return false;
+    // addding at the end - push
+    if (index === this.length) return !!this.push(val);
+    // adding at the beggining
+    if (index === 0) return !!this.unshift(val);
+
+    // somewhere inside
+    var newNode = new Node(val);
+    // getting previous node from list
+    var prev = this.get(index - 1);
+    // temp variable
+    var temp = prev.next;
+    // prev.next is refering not to new node
+    prev.next = newNode;
+
+    // new node is refering to the previous node from its current index
+    newNode.next = temp;
+
+    // lenght up-up!
+    this.length++;
+    return true;
+  }
 }
 
 var list = new SinglyLinkedList();
 
-list.push("HELLO");
-list.push("GOODBYE");
-list.push("!");
-list.push("<3");
-list.push(":)");
+list.push(100);
+list.push(201);
+list.push(250);
+list.push(350);
 
-console.log(list.get(3).val); // <3
+console.log("*".repeat(20));
 
-list.set(3, "<3<3<3");
+list.traverse();
+console.log("*".repeat(20));
 
-console.log(list.get(3).val); // <3
+list.insert(2, 100000000);
+
+list.traverse();
+console.log("*".repeat(20));

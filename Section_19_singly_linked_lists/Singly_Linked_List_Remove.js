@@ -11,6 +11,17 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
+  // method made just for the sake of practice
+  traverse() {
+    var current = this.head;
+    while (current) {
+      console.log(current.val);
+      // in the tail current.next is going to be null - return from loop
+      current = current.next;
+    }
+  }
+  // ************************************************************
+
   push(val) {
     var newNode = new Node(val);
     if (!this.head) {
@@ -61,17 +72,6 @@ class SinglyLinkedList {
     this.length++;
     return this;
   }
-
-  // method made just for the sake of practice
-  traverse() {
-    var current = this.head;
-    while (current) {
-      console.log(current.val);
-      // in the tail current.next is going to be null - return from loop
-      current = current.next;
-    }
-  }
-  // ************************************************************
   get(index) {
     if (index < 0 || index >= this.length) return null;
     var counter = 0;
@@ -83,27 +83,53 @@ class SinglyLinkedList {
     return current;
   }
   set(index, val) {
-    // by get node we are setting reference
     var foundNode = this.get(index);
     if (foundNode) {
-      // modify
       foundNode.val = val;
       return true;
     }
     return false;
   }
+  insert(index, val) {
+    if (index < 0 || index > this.length) return false;
+    if (index === this.length) return !!this.push(val);
+    if (index === 0) return !!this.unshift(val);
+
+    var newNode = new Node(val);
+    var prev = this.get(index - 1);
+    var temp = prev.next;
+    prev.next = newNode;
+    newNode.next = temp;
+    this.length++;
+    return true;
+  }
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === 0) return this.shift();
+    if (index === this.length - 1) return this.pop();
+
+    var previousNode = this.get(index - 1);
+    var removed = previousNode.next;
+    previousNode.next = removed.next;
+
+    this.length--;
+
+    return removed;
+  }
 }
 
 var list = new SinglyLinkedList();
 
-list.push("HELLO");
-list.push("GOODBYE");
-list.push("!");
-list.push("<3");
-list.push(":)");
+list.push(100);
+list.push(201);
+list.push(250);
+list.push(350);
+console.log("*".repeat(20));
 
-console.log(list.get(3).val); // <3
+list.traverse();
+console.log("*".repeat(20));
 
-list.set(3, "<3<3<3");
+list.remove(2);
 
-console.log(list.get(3).val); // <3
+list.traverse();
+console.log("*".repeat(20));
