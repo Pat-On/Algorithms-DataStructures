@@ -11,16 +11,6 @@ class SinglyLinkedList {
     this.tail = null;
     this.length = 0;
   }
-  // method made just for the sake of practice
-  traverse() {
-    var current = this.head;
-    while (current) {
-      console.log(current.val);
-      // in the tail current.next is going to be null - return from loop
-      current = current.next;
-    }
-  }
-  // ************************************************************
 
   push(val) {
     var newNode = new Node(val);
@@ -107,17 +97,36 @@ class SinglyLinkedList {
     if (index < 0 || index >= this.length) return undefined;
     if (index === 0) return this.shift();
     if (index === this.length - 1) return this.pop();
-
-    // middle of the list
     var previousNode = this.get(index - 1);
-
-    // stored here because we want to return it
     var removed = previousNode.next;
     previousNode.next = removed.next;
-
     this.length--;
-
     return removed;
+  }
+
+  print() {
+    var arr = [];
+    var current = this.head;
+    while (current) {
+      arr.push(current.val);
+      current = current.next;
+    }
+    console.log(arr);
+  }
+  reverse() {
+    var node = this.head;
+    this.head = this.tail;
+    this.tail = node;
+    var next;
+    var prev = null;
+    for (var i = 0; i < this.length; i++) {
+      // basicaly it is just reasigning references
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
   }
 }
 
@@ -127,12 +136,8 @@ list.push(100);
 list.push(201);
 list.push(250);
 list.push(350);
+list.push(999);
+list.print();
 console.log("*".repeat(20));
-
-list.traverse();
-console.log("*".repeat(20));
-
-list.remove(2);
-
-list.traverse();
-console.log("*".repeat(20));
+list.reverse();
+list.print();
