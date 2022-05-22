@@ -85,3 +85,12 @@ var list = new SinglyLinkedList();
 list.push("HELLO");
 list.push("GOODBYE");
 list.push("!");
+
+console.log("*".repeat(20));
+list.traverse();
+console.log("*".repeat(20));
+list.unshift("new");
+
+list.traverse();
+
+console.log("*".repeat(20));
