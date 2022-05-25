@@ -25,6 +25,8 @@ Lists: https://visualgo.net/en/list
 
 Big-O Cheat Sheet: https://www.bigocheatsheet.com/
 
+Interesting list of data structures from Wikipedia: https://en.wikipedia.org/wiki/List_of_data_structures 
+
 
 ## Interesting Links from the Book (grokking alhorithms):
 The Euclidean Algorithm https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
