@@ -27,6 +27,10 @@ Big-O Cheat Sheet: https://www.bigocheatsheet.com/
 
 Interesting list of data structures from Wikipedia: https://en.wikipedia.org/wiki/List_of_data_structures 
 
+Interesting Graph: https://musicmap.info/
+
+Adjecency Matrix https://en.wikipedia.org/wiki/Adjacency_matrix
+
 
 ## Interesting Links from the Book (grokking alhorithms):
 The Euclidean Algorithm https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
