@@ -43,7 +43,7 @@ console.log(fibMemo(100));
 
 // Previous approach was TOP-DOWN
 
-// ===================================================================================================================
+// ==================================================================================================================
 
 // Different approach BOTTOM - UP
 // from less comples problem to top, to the most complex part of code
