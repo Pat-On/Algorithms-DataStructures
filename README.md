@@ -1,6 +1,5 @@
 # Algorithms-DataStructures
 
-
 ## This repository is related to:
 
 Book: grokking alhorithms, by Aditya Y. Bhargava
@@ -8,9 +7,6 @@ https://www.amazon.co.uk/Grokking-Algorithms-illustrated-programmers-curious/dp/
 
 Udemy Course: JavaScript Algorithms and Data Structures Masterclass
 https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass/
-
-"a great website that explains math simply": https://betterexplained.com/
-An Interactive Guide To The Fourier Transform: https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/
 
 ## Interesting Links from the course (JavaScript Algorithms and Data Structures Masterclass):
 
@@ -39,6 +35,11 @@ Registers and RAM: Crash Course Computer Science #6 https://www.youtube.com/watc
 part of: https://statmath.wu.ac.at/courses/data-analysis/itdtHTML/node6.html
 
 Course Minda Map: https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link/c25f98c73a03f5b1107cd0e2f4bce29c9d78e31655e55cb0b785d56f0036c9d1
+
+Open Hashing - visualisation - https://www.cs.usfca.edu/~galles/visualization/OpenHash.html
+
+"a great website that explains math simply": https://betterexplained.com/
+An Interactive Guide To The Fourier Transform: https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/
 
 ## Interesting Links from the Book (grokking alhorithms):
 The Euclidean Algorithm https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
