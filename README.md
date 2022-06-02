@@ -41,5 +41,7 @@ Open Hashing - visualisation - https://www.cs.usfca.edu/~galles/visualization/Op
 "a great website that explains math simply": https://betterexplained.com/
 An Interactive Guide To The Fourier Transform: https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/
 
+Arrays vs Linked Lists - Computerphile https://www.youtube.com/watch?v=DyG9S9nAlUM
+
 ## Interesting Links from the Book (grokking alhorithms):
 The Euclidean Algorithm https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm

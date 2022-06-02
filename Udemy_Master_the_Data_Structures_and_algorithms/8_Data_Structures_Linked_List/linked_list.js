@@ -1,5 +1,4 @@
 // null - is called terminator - end of the list
-
 class LinkedList {
   constructor(value) {
     this.head = {
@@ -72,6 +71,9 @@ class LinkedList {
     }
     return currentNode;
   }
+  //   Click here to join the digital event
+
+  //   https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_NGRkOTZkZTMtMGNmYy00NDc4LThlMTgtOWMwODdhZmY0MzJl%40thread.v2%2F0%3Fcontext%3D%257B%2522Tid%2522%253A%252272f988bf-86f1-41af-91ab-2d7cd011db47%2522%252C%2522Oid%2522%253A%2522e82dc135-7684-466b-9537-9e87253901be%2522%252C%2522prid%2522%253A%2522ER_VV2KF3JA3N6MWJQE5WNF8LSFLB%2522%257D%26anon%3Dtrue&type=meetup-join&deeplinkId=9d244500-75b6-4d15-b960-5d5aea59e76e&directDl=true&msLaunch=true&enableMobilePage=true#msdynttrid=f5QM6ag24tt4ikQ1dWZEmbhrQL5d1XkYSKbf-eltes0&suppressPrompt=true
 
   // does not work for removing a head
   remove(index) {
@@ -80,6 +82,26 @@ class LinkedList {
     const unwantedNode = leader.next;
     leader.next = unwantedNode.next;
     this.length--;
+    return this.printList();
+  }
+
+  reverse() {
+    if (!this.head.next) {
+      return this.head;
+    }
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+
+    while (second) {
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+
+    this.head.next = null;
+    this.head = first;
     return this.printList();
   }
 }
@@ -92,5 +114,7 @@ myLinkedList.insert(2, 99);
 myLinkedList.insert(20, 88);
 
 console.log(myLinkedList.printList());
-myLinkedList.remove(0);
+myLinkedList.remove(1);
+console.log(myLinkedList.printList());
+myLinkedList.reverse();
 console.log(myLinkedList.printList());
