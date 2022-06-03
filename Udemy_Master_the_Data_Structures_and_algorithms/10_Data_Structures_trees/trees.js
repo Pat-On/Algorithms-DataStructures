@@ -101,6 +101,8 @@ class BinarySearchTree {
           //Option 3: Right child that has a left child
         } else {
           //find the Right child's left most child
+          // so basicaly the smallest value! simple in concept!
+          // if we would not replace removed value with the smallest the entire tree would not work!
           let leftmost = currentNode.right.left;
           let leftmostParent = currentNode.right;
           while (leftmost.left !== null) {
