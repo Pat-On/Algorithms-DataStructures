@@ -65,5 +65,20 @@ Tail call optimization in ECMAScript 6 https://2ality.com/2015/06/tail-call-opti
 
 Real-world examples of recursion [closed] https://stackoverflow.com/questions/105838/real-world-examples-of-recursion
 
+Sorting algorithms: https://en.wikipedia.org/wiki/Sorting_algorithm
+
+Stable VS Unstable Algorithms: https://stackoverflow.com/questions/1517793/what-is-stability-in-sorting-algorithms-and-why-is-it-important
+
+Heap sort: https://brilliant.org/wiki/heap-sort/
+
+Radix Sort: https://brilliant.org/wiki/radix-sort/
+
+Radix Sort Animation: https://www.cs.usfca.edu/~galles/visualization/RadixSort.html
+
+
+Counting Sort: https://brilliant.org/wiki/counting-sort/
+
+Counting Sort Animation: https://www.cs.usfca.edu/~galles/visualization/CountingSort.html
+
 ## Interesting Links from the Book (grokking alhorithms):
 The Euclidean Algorithm https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
