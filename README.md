@@ -59,5 +59,11 @@ https://stackoverflow.com/questions/13852870/red-black-tree-over-avl-tree
 
 Why are two different concepts both called "heap"? [duplicate] https://stackoverflow.com/questions/1699057/why-are-two-different-concepts-both-called-heap
 
+List of algorithms: https://en.wikipedia.org/wiki/List_of_algorithms
+
+Tail call optimization in ECMAScript 6 https://2ality.com/2015/06/tail-call-optimization.html
+
+Real-world examples of recursion [closed] https://stackoverflow.com/questions/105838/real-world-examples-of-recursion
+
 ## Interesting Links from the Book (grokking alhorithms):
 The Euclidean Algorithm https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
