@@ -82,5 +82,7 @@ Counting Sort Animation: https://www.cs.usfca.edu/~galles/visualization/Counting
 
 Resources: BFS vs DFS https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr
 
+What is the time and space complexity of a breadth first and depth first tree traversal? https://stackoverflow.com/questions/9844193/what-is-the-time-and-space-complexity-of-a-breadth-first-and-depth-first-tree-tr
+
 ## Interesting Links from the Book (grokking alhorithms):
 The Euclidean Algorithm https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm
