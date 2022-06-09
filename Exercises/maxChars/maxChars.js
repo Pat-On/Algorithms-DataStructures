@@ -6,7 +6,7 @@ function maxChar(str) {
   const counterObject = {};
   let maxCharacter = "";
 
-  for (let i = 0; i <= str.length - 1; i++) {
+  for (let i = 0; i < str.length; i++) {
     // short solutions
     // counterObject[str[i]] = counterObject[str[i]] + 1 || 1;
     if (counterObject[str[i]]) {
@@ -16,7 +16,7 @@ function maxChar(str) {
     }
   }
 
-  console.log(counterObject);
+  //   console.log(counterObject);
   //   for (const item in counterObject) {
   //     if (!counterObject[maxCharacter]) {
   //       maxCharacter = item;
@@ -39,7 +39,7 @@ function maxChar(str) {
   });
   return maxCharacter;
 }
-
+console.log(maxChar("a"));
 console.log(maxChar("abccccccccccd"));
 console.log(maxChar("apple 1234522222222"));
 
@@ -66,3 +66,31 @@ function maxChar2(str) {
 
 console.log(maxChar2("abccccccccccd"));
 console.log(maxChar2("apple 1234522222222"));
+
+breaker();
+
+function maxChar3(str) {
+  const charMap = {};
+  let max = 0;
+  let maxChar = "";
+
+  for (let char of str) {
+    if (charMap[char]) {
+      charMap[char]++;
+    } else {
+      charMap[char] = 1;
+    }
+  }
+
+  for (let char in charMap) {
+    if (charMap[char] > max) {
+      max = charMap[char];
+      maxChar = char;
+    }
+  }
+
+  return maxChar;
+}
+
+console.log(maxChar3("abccccccccccd"));
+console.log(maxChar3("apple 1234522222222"));
