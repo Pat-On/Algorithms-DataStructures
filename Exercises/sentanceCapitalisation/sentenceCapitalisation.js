@@ -40,6 +40,7 @@ console.log(capitalize("look, it is working!")); // "Look, It Is Working!"
 breaker();
 
 function capitalize2(str) {
+  // hardcoded part - not so much cool
   let result = str[0].toUpperCase();
 
   for (let i = 1; i < str.length; i++) {
