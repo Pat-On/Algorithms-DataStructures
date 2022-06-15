@@ -29,3 +29,25 @@ function pyramid(n) {
 
 pyramid(3);
 pyramid(5);
+
+breaker();
+
+function pyramidRecursive(n, row = 0, level = "") {
+  // base case
+  if (row === n) {
+    return;
+  }
+
+  const midpoint = Math.floor((2 * n - 1) / 2);
+  let add;
+  if (midpoint - row <= level.length) {
+    add = "#";
+  } else {
+    add = " ";
+  }
+
+  pyramid(n, row, level + add);
+}
+
+pyramidRecursive(3);
+pyramidRecursive(5);
