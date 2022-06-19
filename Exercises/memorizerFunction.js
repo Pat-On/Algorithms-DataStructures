@@ -4,7 +4,6 @@ function memoize(fn) {
 
   return function (...args) {
     if (cache[args]) {
-      console.log(cache);
       return cache[args];
     }
 
