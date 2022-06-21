@@ -75,15 +75,68 @@ class LinkedList {
 
     return nodeToReturn;
   }
+  clear() {
+    // we remove reference from linked list, but information may still be in memory hmm ^^
+    this.head = null;
+  }
+
+  removeFirst() {
+    if (!this.head) {
+      return null;
+    }
+
+    // this.head = this.head.next
+
+    const removed = this.head;
+    removed.next = null;
+
+    const oldSecondNode = this.head.next;
+    this.head = oldSecondNode;
+
+    this.length--;
+    return removed;
+  }
+
+  removeLast() {
+    if (!this.head) {
+      return null;
+    }
+    // edge case when only one item, only head
+    if (!this.head.next) {
+      return this.removeFirst();
+    }
+
+    // I should use previous and node - following convention
+    let secondFromEnd = null;
+    let removedNode = null;
+    let node = this.head;
+    while (node.next) {
+      secondFromEnd = node;
+      node = node.next;
+    }
+
+    removedNode = secondFromEnd.next;
+    secondFromEnd.next = null;
+
+    this.length--;
+
+    return removedNode;
+  }
 }
 
 const list = new LinkedList();
 
-list.insertFirst(5);
+// list.insertFirst(5);
 list.insertFirst(10);
-list.insertFirst(15);
+list.insertFirst(5);
+// list.insertFirst(15);
 
+console.log(list.removeLast());
 console.log(list);
-console.log(list.size());
-console.log(list.getFirst());
-console.log(list.getLast());
+
+// console.log(list);
+// console.log(list.size());
+// console.log(list.getFirst());
+// console.log(list.removeFirst());
+// console.log(list.getFirst());
+// console.log(list.getLast());
