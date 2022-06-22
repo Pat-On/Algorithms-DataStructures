@@ -88,10 +88,10 @@ class LinkedList {
     // this.head = this.head.next
 
     const removed = this.head;
-    removed.next = null;
 
     const oldSecondNode = this.head.next;
     this.head = oldSecondNode;
+    removed.next = null;
 
     this.length--;
     return removed;
@@ -122,16 +122,45 @@ class LinkedList {
 
     return removedNode;
   }
+
+  insertLast(data) {
+    const node = new Node(data);
+    const lastNode = this.getLast();
+    if (!lastNode) {
+      return this.insertFirst(node);
+    }
+
+    lastNode.next = node;
+    return lastNode.next;
+
+    // solution written in different way:
+    // const last = this.getLast();
+
+    // if (last) {
+    //   // there are some existing node in our chain
+    //   last.next = new Node(data);
+    //   return last.next;
+    // } else {
+    //   // empty chain
+    //   this.head = new Node(data);
+    //   return this.head;
+    // }
+  }
 }
 
 const list = new LinkedList();
 
 // list.insertFirst(5);
-list.insertFirst(10);
-list.insertFirst(5);
+// list.insertFirst(10);
+// list.insertFirst(5);
 // list.insertFirst(15);
 
-console.log(list.removeLast());
+// console.log(list.removeLast());
+console.log(list);
+list.insertLast(5);
+console.log(list);
+list.insertLast(55);
+// list.removeFirst();
 console.log(list);
 
 // console.log(list);
