@@ -7,7 +7,10 @@ class Node {
 
 /* 
 
-You can implement 
+        You can implement by reusing code! 
+
+                Think ahead! 
+
 insertFirst() insertLast() -> insertAt(data, 0) insertAt(data, this.size() - 1)
 removeFirst() removeLast() -> removeAt(0)       removeAt(this.size() - 1)
 getFirst()    getLast()    -> getAt(0)          getAt(this.size() - 1)
@@ -279,17 +282,38 @@ class LinkedList {
     const node = new Node(data, previous.next);
     previous.next = node;
   }
+
+  forEach(fn) {
+    let node = this.head;
+    let counter = 0;
+    while (node) {
+      fn(node, counter);
+      node = node.next;
+      counter++;
+    }
+  }
+
+  *[Symbol.iterator]() {
+    let node = this.head;
+    while (node) {
+      yield node;
+      node = node.next;
+    }
+  }
 }
 
 const list = new LinkedList();
 
 list.insertFirst(1);
-// list.insertFirst(2);
-// list.insertFirst(3);
+list.insertFirst(2);
+list.insertFirst(3);
 // list.insertFirst(4);
-list.insertAt(222, 0);
+// list.insertAt(222, 0);
 
-console.log(list.head);
+// console.log(list.head);
+for (let item of list) {
+  console.log(item);
+}
 // console.log(list);
 // console.log(list.head.next);
 
