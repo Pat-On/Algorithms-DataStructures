@@ -5,6 +5,18 @@ class Node {
   }
 }
 
+/* 
+
+You can implement 
+insertFirst() insertLast() -> insertAt(data, 0) insertAt(data, this.size() - 1)
+removeFirst() removeLast() -> removeAt(0)       removeAt(this.size() - 1)
+getFirst()    getLast()    -> getAt(0)          getAt(this.size() - 1)
+
+So we can write just three function on right and reuse the code
+
+so we are writing 3 function which are going to be much more generic.
+*/
+
 class LinkedList {
   // at the end Linked List know only about head and in case of doubly linked list - tail
   constructor() {
@@ -227,15 +239,58 @@ class LinkedList {
     }
     previous.next = previous.next.next;
   }
+
+  insertAt(data, index) {
+    // if (!this.head || index === 0) {
+    //   return this.insertFirst(data);
+    // }
+
+    // const nodeToInsert = new Node(data);
+
+    // let counter = 0;
+    // let previous = null;
+    // let node = this.head;
+    // while (node) {
+    //   if (counter === index) {
+    //     previous.next = nodeToInsert;
+    //     nodeToInsert.next = node;
+    //     return nodeToInsert;
+    //   }
+    //   previous = node;
+    //   node = node.next;
+    //   counter++;
+    // }
+
+    // this.insertLast(nodeToInsert);
+
+    // other solution
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
+    }
+
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+
+    // just the short cut
+    const previous = this.getAt(index - 1) || this.getLast();
+    const node = new Node(data, previous.next);
+    previous.next = node;
+  }
 }
 
 const list = new LinkedList();
 
 list.insertFirst(1);
-list.insertFirst(2);
-list.insertFirst(3);
-list.insertFirst(4);
+// list.insertFirst(2);
+// list.insertFirst(3);
+// list.insertFirst(4);
+list.insertAt(222, 0);
 
-console.log(list.removeAt(4));
+console.log(list.head);
 // console.log(list);
 // console.log(list.head.next);
+
+module.exports = { Node, LinkedList };
