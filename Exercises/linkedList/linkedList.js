@@ -146,26 +146,96 @@ class LinkedList {
     //   return this.head;
     // }
   }
+
+  getAt(index) {
+    //   let node = this.head;
+    //   let counter = 0;
+    //   let nodeToReturn = null;
+
+    //   while (node) {
+    //     if (counter === index) {
+    //       nodeToReturn = node;
+    //       break;
+    //     }
+    //     node = node.next;
+    //     counter++;
+    //   }
+
+    //   return nodeToReturn ? nodeToReturn : -1;
+
+    // tutor solution
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+      if (counter === index) {
+        return node;
+      }
+
+      counter++;
+      node = node.next;
+    }
+    return null;
+  }
+
+  removeAt(index) {
+    // edge cases:
+    // - empty list
+    // - index out of bound
+    // - last node
+    // if (!this.head) {
+    //   return null;
+    // }
+    // if (!this.head.next || index === 0) {
+    //   return this.removeFirst();
+    // }
+
+    // let counter = 0;
+    // let node = this.head;
+    // let previous = null;
+    // let temp = null;
+
+    // while (node) {
+    //   if (counter === index) {
+    //     temp = previous.next;
+    //     previous.next = null;
+    //     temp.next = null;
+    //     return temp;
+    //   }
+    //   previous = node;
+    //   node = node.next;
+    //   counter++;
+    // }
+    // return null;
+
+    // tutor solution: reusing methods - more clean solution
+    if (!this.head) {
+      console.log("!this.head");
+      return null;
+    }
+
+    if (index === 0) {
+      console.log("index === 0");
+      this.head = this.head.next;
+      return null;
+    }
+
+    const previous = this.getAt(index - 1);
+    console.log("previous", previous);
+    if (!previous || !previous.next) {
+      console.log("!previous || !previous.next");
+      return null;
+    }
+    previous.next = previous.next.next;
+  }
 }
 
 const list = new LinkedList();
 
-// list.insertFirst(5);
-// list.insertFirst(10);
-// list.insertFirst(5);
-// list.insertFirst(15);
+list.insertFirst(1);
+list.insertFirst(2);
+list.insertFirst(3);
+list.insertFirst(4);
 
-// console.log(list.removeLast());
-console.log(list);
-list.insertLast(5);
-console.log(list);
-list.insertLast(55);
-// list.removeFirst();
-console.log(list);
-
+console.log(list.removeAt(4));
 // console.log(list);
-// console.log(list.size());
-// console.log(list.getFirst());
-// console.log(list.removeFirst());
-// console.log(list.getFirst());
-// console.log(list.getLast());
+// console.log(list.head.next);
