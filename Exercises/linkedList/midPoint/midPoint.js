@@ -1,5 +1,5 @@
-const breaker = require("../breaker_line")();
-const { LinkedList } = require("../linkedList/index");
+const breaker = require("../../breaker_line")();
+const { LinkedList } = require("../index");
 
 /* 
 return the middle node of a linked list.
