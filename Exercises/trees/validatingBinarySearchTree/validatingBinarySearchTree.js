@@ -7,10 +7,11 @@
 
 // null marking that the min and max was not set-up yet
 function validate(node, min = null, max = null) {
+  // base case
   if (max !== null && node.data > max) {
     return false;
   }
-
+  // base case
   if (min !== null && node.data < min) {
     return false;
   }
