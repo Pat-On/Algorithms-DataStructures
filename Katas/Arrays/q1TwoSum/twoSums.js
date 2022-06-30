@@ -51,4 +51,8 @@ step 5 double check for errors
 
 
 Step 6: test our code with ours test cases
+
+Step 7 (Execution?)
+
+Step 8 Can we optimize our solution
 */
