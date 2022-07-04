@@ -26,7 +26,16 @@
 
     Step 3: Figure out a solution without code
 
-        
-        
 
+        - entire array to get the answer
+        - smallest hight determine how much water can be hold
+        - high of other elements within container determine how much water can be hold - reduce it very often
+        - break problem into the smaller elements - base on individual elements? 
+
+
+        General Formula 
+            
+            current water = min(maxL, maxR) - current Hight
+
+             
 */
