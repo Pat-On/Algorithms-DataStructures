@@ -60,5 +60,28 @@ It is almost like array, linear structure, order etc
 /*
     Step 2: Write out some test cases
 
+        Best test case
+
+        S: "ab#z"       T:"az#z"    Return True
+        s: "abc#d"      T:"acc#c"   Return False
+        s: "x#y#2#"     T:"a#"      Return True
+        s: "a###b"      T: "b"      Return true
+        s: "Ab#z"       T: "ab#z"   Return False
+
+
+*/
+
+/*
+        Logical way of solving problem
+
+        "ab#z" -> "az"
+        "az#z" -> "az"
+
+        Here we are doing normal str to str comparison, 
+        so we can compare lengths etc
+
+                Return True
+
         
+
 */

@@ -1,6 +1,7 @@
 const string1 = "ab#z";
 const string2 = "az#z";
 
+// helper function
 const buildString = function (string) {
   const builtString = [];
   for (let p = 0; p < string.length; p++) {
