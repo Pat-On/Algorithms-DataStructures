@@ -14,7 +14,7 @@ const buildString = function (string) {
   return builtString;
 };
 
-var backspaceCompare = function (S, T) {
+const backspaceCompare = function (S, T) {
   const finalS = buildString(S);
   const finalT = buildString(T);
 
