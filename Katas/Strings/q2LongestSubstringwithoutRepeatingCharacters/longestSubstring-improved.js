@@ -1,45 +1,26 @@
-const backspaceCompare = function (S, T) {
-  let p1 = S.length - 1,
-    p2 = T.length - 1;
+const string = "au";
 
-  while (p1 >= 0 || p2 >= 0) {
-    if (S[p1] === "#" || T[p2] === "#") {
-      if (S[p1] === "#") {
-        let backCount = 2;
+const lengthOfLongestSubstring = function (s) {
+  if (s.length <= 1) return s.length;
 
-        while (backCount > 0) {
-          p1--;
-          backCount--;
+  const seen = {};
+  let left = 0,
+    longest = 0;
 
-          if (S[p1] === "#") {
-            backCount += 2;
-          }
-        }
-      }
+  for (let right = 0; right < s.length; right++) {
+    const currentChar = s[right];
+    const previouslySeenChar = seen[currentChar];
 
-      if (T[p2] === "#") {
-        let backCount = 2;
-
-        while (backCount > 0) {
-          p2--;
-          backCount--;
-
-          if (T[p2] === "#") {
-            backCount += 2;
-          }
-        }
-      }
-    } else {
-      if (S[p1] !== T[p2]) {
-        return false;
-      } else {
-        p1--;
-        p2--;
-      }
+    if (previouslySeenChar >= left) {
+      left = previouslySeenChar + 1;
     }
+
+    seen[currentChar] = right;
+
+    longest = Math.max(longest, right - left + 1);
   }
 
-  return true;
+  return longest;
 };
 
-console.log(backspaceCompare(string1, string2));
+console.log(lengthOfLongestSubstring(string));
