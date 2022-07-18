@@ -1,6 +1,11 @@
 const string = "A man, a plan, a canal: Panama";
 
 const isValidPalindrome = function (s) {
+  // note about regex:
+  // /[^A-Za-z0-9]/g
+  // ^ everything what is not
+  // /g global
+
   s = s.replace(/[^A-Za-z0-9]/g, "").toLowerCase();
 
   // initialize left/right pointers to point at the middle index of the string. Remember, indexes start at 0 meaning that we have to floor() the value from dividing length by 2 in order to get the index of the center.
@@ -26,3 +31,9 @@ const isValidPalindrome = function (s) {
 };
 
 console.log(isValidPalindrome(string));
+
+console.log(isValidPalindrome("aabaa"));
+console.log(isValidPalindrome("aabbaa"));
+console.log(isValidPalindrome("aba"));
+console.log(isValidPalindrome("a"));
+console.log(isValidPalindrome(""));
