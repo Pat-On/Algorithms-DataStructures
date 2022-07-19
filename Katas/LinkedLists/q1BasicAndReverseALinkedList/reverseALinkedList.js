@@ -52,6 +52,8 @@ class SinglyLinkedList {
     }
   }
   // to finish
+  // time O (n)
+  // space (O) 1 - because a linked list already exists in the memory
   reverse() {
     let currentNode = this.head;
 
