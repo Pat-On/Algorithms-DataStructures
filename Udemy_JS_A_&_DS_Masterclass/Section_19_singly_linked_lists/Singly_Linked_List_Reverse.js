@@ -120,7 +120,7 @@ class SinglyLinkedList {
     var next;
     var prev = null;
     for (var i = 0; i < this.length; i++) {
-      // basicaly it is just reasigning references
+      // basically it is just reassigning references
       next = node.next;
       node.next = prev;
       prev = node;

@@ -14,12 +14,6 @@
         False                   False
 (it is not almost palindrome because removing one letter changing nothing)
 
-
-
-
-
-
-
     Almost Palindrome edge cases - six case tests
     "race a car"  - True
     "abccdba" - True
@@ -30,6 +24,8 @@
 
 */
 
+// space complexity Big O (n)
+// space complexity - no scaling data structures =- so O(n)
 const validPalindrome = function (s) {
   let start = 0;
   let end = s.length - 1;
@@ -57,3 +53,10 @@ const validSubPalindrome = function (s, start, end) {
   }
   return true;
 };
+
+console.log(validPalindrome("race a car")); // - True
+console.log(validPalindrome("abccdba")); // - True
+console.log(validPalindrome("abcdefdba")); // - False
+console.log(validPalindrome("")); // - True
+console.log(validPalindrome("a")); // - True
+console.log(validPalindrome("ab")); // - True
