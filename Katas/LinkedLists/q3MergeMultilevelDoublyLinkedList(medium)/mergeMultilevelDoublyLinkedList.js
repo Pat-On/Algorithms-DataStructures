@@ -20,4 +20,29 @@
   
         
     Step 2: Write out some test cases
+
+        - we can have multiple nested levels
+
+
+            1 - 2 - 3 - 4 - 5 - 6 
+                |           |
+                |           12  - 13
+                7 - 8 - 9
+                    |
+                    10 - 11
+
+        Final output
+            1 - 2 - 7 - 8 - 10 - 11 - 9 - 3 - 4 - 5 - 12 - 13 - 6
+
+
+
+        - null -> null
+        - 3 -> 3
+
+
+        main problem:
+            - flatting out entire list
+
+        subproblem 
+            - merging child doubly linked list into the parent
 */
