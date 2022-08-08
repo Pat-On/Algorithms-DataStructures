@@ -1,0 +1,6 @@
+/*
+    assistant data structure which can help to solve the main problem
+
+    help to retrieve the data and then access it afterward 
+
+*/
