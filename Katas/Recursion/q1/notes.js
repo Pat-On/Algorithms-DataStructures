@@ -38,5 +38,24 @@
     [3]  
      _
 
-     
+
+*/
+
+/*
+    Divide and Conquer - recap
+
+        1. Multi-branched recursion.
+        2. Breaks a problem into a multiple smaller but same sub-problems.
+        3. Combines the solutions of sub-problems into the solution for the original problem.
+
+            example: Quicksort
+
+            [2, 7, 8, 6, 4, 1, 9, 3, 5]
+
+            [2, 4, 1, 3, 5, 8, 9, 6, 7]     ---> (five is sorted)
+                         _
+
+            [2, 4, 1, 3]            [8, 9, 6, 7]   ---> sub-arrays
+            
+
 */
