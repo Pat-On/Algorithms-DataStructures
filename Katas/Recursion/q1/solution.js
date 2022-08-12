@@ -33,7 +33,7 @@ const quickSort = function (nums, left, right) {
 };
 
 // solution of the exercise
-// time O(n log n)
+// time O(n)
 // space O(log n)
 const findKthLargest = function (nums, k) {
   const indexToFind = nums.length - k;
