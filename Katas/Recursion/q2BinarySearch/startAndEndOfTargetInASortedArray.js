@@ -48,11 +48,13 @@ const binarySearch = (nums, left, right, target) => {
   return -1;
 };
 
+// Space O(1)
+// Time O(log n) - because of the binary search
 const searchRange = function (nums, target) {
   // when nums array is empty
   if (nums.length < 1) return [-1, -1];
 
-  const firstPos = binarySearch(nums, 0, nums.length - 1, target);
+  const firstPos = binarySearch(nums, 0, nums.length - 1, target); // log(n)
 
   // no value found
   if (firstPos === -1) return [-1, -1];
@@ -64,6 +66,7 @@ const searchRange = function (nums, target) {
 
   // checking left side of array
   while (startPos !== -1) {
+    // log + log(n/2) + log(n/4)... (so log(n))
     temp1 = startPos;
     startPos = binarySearch(nums, 0, startPos - 1, target);
   }
@@ -71,6 +74,7 @@ const searchRange = function (nums, target) {
 
   // checking right side of array
   while (endPos !== -1) {
+    // log + log(n/2) + log(n/4)... (so log(n))
     temp2 = endPos;
     endPos = binarySearch(nums, endPos + 1, nums.length - 1, target);
   }
@@ -78,6 +82,8 @@ const searchRange = function (nums, target) {
 
   return [startPos, endPos];
 };
+
+// so log n + log n + log n = 3 log n
 
 const array = [1, 3, 3, 5, 5, 5, 8, 9];
 const targetToFind = 5;
