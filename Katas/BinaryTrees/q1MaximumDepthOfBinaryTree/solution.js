@@ -50,8 +50,8 @@ root.insert([1, 1, 1, 1, null, null, null, 1, null, null, null, 1, null, null]);
 // worse case Space O(n)
 
 // Time O(n)
-// Space
-const maxDepth = function (node, currentDepth) {
+// Space O (1)
+const maxDepth = function (node, currentDepth = 0) {
   if (!node) {
     return currentDepth;
   }
