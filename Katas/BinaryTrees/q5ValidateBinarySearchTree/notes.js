@@ -68,4 +68,41 @@
             / \     / \
          10    14  13  20
 
+
+------------------------- Logical Solution -------------------------
+
+
+                                  12
+                        /          |       \
+                       7           |        18
+      (-Infinity <  7  < 12)       |   (12 <  18 < +Infinitive )
+                /       \          |      /       \
+                5       9          |      14      25
+  (-Infinity < 5 < 7)  (7< 9 < 12) | 12 < 14 < 18)  (18 < 25 < +Infinitive )
+                    /              |        \
+                    8              |          15
+                (7 < 8 < 9)        |    (14 < 15 < 18)
+                                   |                \
+                                   |                16
+                                   |            (15 < 16 < 18)
+                                   |                    \
+                                   |                    17
+                                   |                (16 < 17 < 18)
+
+    Do the way how we navigate through tree matter?
+        - DFS - because we need to keep relation parent kid 
+        - Pre-order Traversals
+
+
+        * we can utilize recursion and pass the value from top to the bottom! - !Important to remember!
+
+
+        - to the left value need to be less than 12
+        - when you are going to the left and the to right the value need to be for example 7 < 9 < 12
+
+
+    On most left and most right sides of tree we do not have both values to compare?
+        So how we can make it consistent? - boundaries
+
+    -Infinity and +Infinitive <- I was right! 
 */
