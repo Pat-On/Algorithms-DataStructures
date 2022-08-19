@@ -20,6 +20,8 @@ tree.insert([
   null,
 ]);
 
+// time: O()
+// space: O(w) wide of the tree
 const rightSideViewBFS = function (root) {
   if (!root) return [];
   const result = [];
