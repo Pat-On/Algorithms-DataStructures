@@ -28,4 +28,30 @@
 
                     3
                   /   \     answer: [3]
+
+
+
+
+    -------------------------------------- BFS SOLUTION --------------------------------------
+
+                    3
+                  /   \
+                6        1
+               /  \    /  \                      o
+            9      2        4               >   /|\
+          /  \                                   ^
+               5
+              /  \
+            8
+
+    answer: [1, 3, 6, 7, 8]
+
+    BFS is going level by level and task care about last item going from left to right
+
+        Steps:
+            1. Identify the end of the level
+            2. add last nodes to results
+            
+
+
 */
