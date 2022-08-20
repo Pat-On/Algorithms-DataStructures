@@ -57,6 +57,7 @@ class PriorityQueue {
 
 */
   push(value) {
+    // O(log N)
     this._heap.push(value);
     this._siftUp();
 
@@ -73,6 +74,7 @@ class PriorityQueue {
   }
   // -------------------------------------------------------------- "deletion"
   pop() {
+    // O(log N)
     if (this.size() > 1) {
       this._swap(0, this.size() - 1);
     }
