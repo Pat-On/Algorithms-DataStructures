@@ -33,4 +33,8 @@
                                                                            right  (idx * 2) + 2
 
 
+        Insertion Time: Big O (log n) hight of the tree
+        
+        Removal Time : Big O (log n) hight of the tree
+
 */
