@@ -69,7 +69,7 @@ const dfs = function (matrix, row, col, seen, values) {
 };
 
 // 0  1  2  3  4  (column)
-// 0  | [ 1,  2,  3,  4,  5] |               6 x 6
+// 0  | [ 1,  2,  3,  4,  5] |
 // 1  | [ 6,  7,  8,  9, 10] |             current Row: 0 Col: 0
 // 2  | [11, 12, 13, 14, 15] |
 // 3  | [16, 17, 18, 19, 20] |
