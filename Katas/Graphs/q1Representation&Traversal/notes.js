@@ -92,4 +92,14 @@ Two most common ways of representing the graph
 
         check screenshot: BFSGraphsExample.png
 
+                JS files:
+                        AdjacencyMatrixBFS.js
+                        AdjacencyListBFS.js
+
+----------------------------------------------------------------------------------------------------
+------------------------------ Depth First Search in Graphs ----------------------------------------
+----------------------------------------------------------------------------------------------------
+
+iterative version of it - based on stack
+
 */
