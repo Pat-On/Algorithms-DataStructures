@@ -176,6 +176,89 @@ they are helping you what is the shortest distance from node zero to any other n
 
 
 
+------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------- Logical Solution --------------------------------------------------- 
+
+   n = 3  k = 2    times = [[2, 3, 4]]
 
 
+
+   so we are starting from the node pointed in the k variable and we are setting it to 0 in the array
+
+    example:  k=1
+              [
+              1  0
+              2  Infinity
+              3  Infinity
+              4  Infinity
+              5  Infinity
+              ]
+
+
+              Step:
+      what is the distance to immediate neighbors / edges
+
+    example:  k=1
+              [
+              1  0
+              2  9
+              3  Infinity
+              4  2
+              5  Infinity
+              ]
+
+
+
+              What is the smallest value in the array
+              Answer: 4
+
+              in our example 4 --4---> 2
+                             4 --6---> 5
+
+    example:  k=1
+              [
+              1  0
+              2  6
+              3  Infinity
+              4  2
+              5  8
+              ]
+
+                We are now blocking 4 and we are looking for next smallest value: 2
+
+                2 --1--> 5
+
+    example:  k=1
+              [
+              1  0
+              2  6
+              3  Infinity
+              4  2
+              5  6 + 1 = 7
+              ]
+
+
+              We are now blocking 4 and we are looking for next smallest value: 5
+
+              5 --7--> 3
+
+    example:  k=1
+              [
+              1  0
+              2  6
+              3  7 + 7 = 14
+              4  2
+              5  7
+              ]
+
+              we can not go to anywhere because we checked entire graph
+
+
+------- graph with the edge that we can not access
+                - we would have the infinity in the array on the unaccessible node
+
+
+
+
+          There is good solution to implement it with the priority queue. <3 NICE
  */
