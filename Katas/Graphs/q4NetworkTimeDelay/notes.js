@@ -261,4 +261,80 @@ they are helping you what is the shortest distance from node zero to any other n
 
 
           There is good solution to implement it with the priority queue. <3 NICE
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------ Thinking about negative numbers ---------------------------------------------------
+
+Best Priority queue for dijkstra's - remove and not allow for duplicates                        Space for improvement
+              this solution improving the efficiency of the code, 
+              because in worse case we would got all references to the node from children nodes.
+
+
+
+
+
+
+                                                
+             In our implementation od dijkstra algorithm it is going to work  
+             but efficiency of the code is not quarantined because it might be now 
+             Time: O(e) - so basically it might be equal to the number of the edges
+             - In our solution we used the heap which is assuming that we always receiving the positive numbers.
+             Dijkstra's algorithm is not handling negatives cycles well, and stuck in loop.
+             
+                    2       
+              1 ---------> 2                0 [
+              |            ^                1
+           3  |            |                2           
+              |            | -6             3     ]               
+              v            | 
+              3----------> 4                                                                                              
+                     4                                                        
+                                                                           
+                                                                           
+------------------------------------------------------------------------------------------------------------------------                                                                         
+------------------------------------------- The Bellman-Ford Algorithm -------------------------------------------------                                                                         
+                                                                          
+- Bellman-Ford Algorithm
+
+
+- Dynamic Programming (algorithm paradigm)
+
+
+                        Greedy                        Optimization      min / max
+
+
+
+                      4         1           4
+                      ----> A -----> C -----------|
+                    /               ^             V
+                 S                / 6  \ 7        E
+                    \           /        V        ^
+                      -------> B -------> D-------|
+                        2           5         10
+
+
+
+              ------------------- S -------------------
+              |         |         |         |         |                    We are repeating plenty of calculation within              
+            4 |      4  |       2 |       2 |       2 |                       Space tree (distances)
+              |         |         |         |         |                        
+              A         A         B         B         B                    This is something what is improved by dynamic programing - Memoization
+              |         |         |         |         |                        
+            1 |      1  |       6 |       6 |       5 |                        Memoization -> process of saving values
+              |         |         |         |         |                                       so we use more space but improve time efficiency
+              C         C         C         C         D                         
+              |         |         |         |         |                         
+            4 |       7 |       5 |       7 |      10 |                         
+              |         |         |         |         |                         
+              E         D         E         D         E                         
+                        |                   |                                 
+              9      10 |        12      10 |        17                           
+                        |                   |                                 
+                        E                   E                                 
+
+                      22                  25
+
  */
