@@ -319,7 +319,7 @@ Best Priority queue for dijkstra's - remove and not allow for duplicates        
 
               ------------------- S -------------------
               |         |         |         |         |                    We are repeating plenty of calculation within              
-            4 |      4  |       2 |       2 |       2 |                       Space tree (distances)
+            4 |      4  |       2 |       2 |       2 |                       Full State Space Tree (distances)
               |         |         |         |         |                        
               A         A         B         B         B                    This is something what is improved by dynamic programing - Memoization
               |         |         |         |         |                        
@@ -336,5 +336,185 @@ Best Priority queue for dijkstra's - remove and not allow for duplicates        
                         E                   E                                 
 
                       22                  25
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------- Logical Solution --------------------------------------------------- 
+
+                              5
+                -------------------------------
+                |                             |
+                V      9                       |
+                1 ---------> 2 <----          |
+                |          ^ |        \       |
+                |       /    |        3 \     |
+              2 |  -4 /      | -3         --- 3
+                |   /        |            ^
+                | /          |          /
+                V/           V      7  /
+                4 ---------> 5 -----
+
+                  (1, 2) (3, 2), (5, 3) (3, 1) (2, 5) (4,5) (1,4) (4,1)
+
+
+                n-1 = 4
+---------------------- 1st iteration ----------------------
+                1: 0
+                2: Infinity
+                3: Infinity
+                4: Infinity
+                5: Infinity
+
+                (1, 2)
+                1: 0
+                2: 9
+                3: Infinity
+                4: Infinity
+                5: Infinity
+
+                (3, 2)  [we skip it, because infinity plus any number is infinity]
+                1: 0
+                2: 9
+                3: Infinity
+                4: Infinity
+                5: Infinity
+
+                (5, 3)[we skip it, because infinity plus any number is infinity]
+                1: 0
+                2: 9
+                3: Infinity
+                4: Infinity
+                5: Infinity
+
+                (3, 1)[we skip it, because infinity plus any number is infinity]
+                1: 0
+                2: 9
+                3: Infinity
+                4: Infinity
+                5: Infinity
+
+                (2, 5)
+                1: 0
+                2: 9
+                3: Infinity
+                4: Infinity
+                5: 6
+
+                (4, 5)[we skip it, because infinity plus any number is infinity]
+                1: 0
+                2: 9
+                3: Infinity
+                4: Infinity
+                5: 6
+
+                (1, 4)
+                1: 0
+                2: 9
+                3: Infinity
+                4: 2
+                5: 6
+
+                (4, 2)
+                1: 0
+                2: -2
+                3: Infinity
+                4: 2
+                5: 6    
+                
+
+---------------------- 2nd iteration ----------------------  
+                EDGES:
+  (1, 2) (3, 2), (5, 3) (3, 1) (2, 5) (4,5) (1,4) (4,1)
+
+
+                (1, 2)
+                1: 0
+                2: -2
+                3: Infinity
+                4: 2
+                5: 6   
+
+                (3, 2)  [we skip it, because infinity plus any number is infinity]
+                1: 0
+                2: -2
+                3: Infinity
+                4: 2
+                5: 6   
+
+                (5, 3)
+                1: 0
+                2: -2
+                3: 13
+                4: 2
+                5: 6   
+
+                (3, 1)
+                1: 0
+                2: -2
+                3: 13
+                4: 2
+                5: 6   
+
+                (2, 5)
+                1: 0
+                2: -2
+                3: 13
+                4: 2
+                5: -5   
+
+                (4, 5)
+                1: 0
+                2: -2
+                3: 13
+                4: 2
+                5: -5   
+
+                (1, 4)
+                1: 0
+                2: -2
+                3: 13
+                4: 2    [from 1 to 4 is 2, what is equal to two so we are leaving it]
+                5: -5   
+
+                (4, 2)
+                1: 0
+                2: -2   [from 4 to 2 is -2, what is equal to -2, so we are leaving it]
+                3: 13
+                4: 2
+                5: -5     
+
+
+---------------------- 3rd iteration ----------------------  
+                EDGES:
+  (1, 2) (3, 2), (5, 3) (3, 1) (2, 5) (4,5) (1,4) (4,1)
+
+                
+                  (1,2) (3,2) no changes
+
+                (5,3 )
+                1: 0
+                2: -2   
+                3: 2
+                4: 2
+                5: -5   
+
+                  (3, 1) (2, 5) (4,5) (1,4) (4,1) no changes
+ 
+ 
+ ---------------------- 4rd iteration ----------------------  
+
+      We changed one value in previous iteration so we have to continue.
+      If it would not happen we could have stop it here.
+
+Constraint:
+                  Bellman-Ford Algorithm does not work when there is negative cycle! 
+
+
 
  */
