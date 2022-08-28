@@ -2,6 +2,7 @@ const longArray = require("./crazyBigArray");
 
 // T: O(n)
 // S: O(n)
+// top down approach
 
 const minCostClimbingStairs = function (cost) {
   const memoArray = []; // dynamic programing pattern
@@ -26,5 +27,4 @@ const minCost = function (i, cost, dpArray) {
 
 console.log(minCostClimbingStairs([20, 15, 30, 5]));
 
-// uff it is taking eternity!
 console.log(minCostClimbingStairs(longArray));

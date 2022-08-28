@@ -152,5 +152,47 @@ Why?
                  because what we are doing is basically memorizing value at specific indexes
 
 
-    
+
+----------------------------------------------------------------------------------------------------
+--------------------------------------------- STEP 3 -----------------------------------------------
+----------------------------------------------------------------------------------------------------
+------------------------------- Understanding The Bottom Up Approach -------------------------------
+------------------------------------------(TABULATION)----------------------------------------------
+----------------------------------------------------------------------------------------------------
+
+
+cost = [20, 15, 30, 5] _        Recurrence Relation                                           
+                                    minCost(i) = cost[i] + min(minCost(i - 1), minCost(i - 2))
+                                    minCost(1) = cost[i]
+                                    minCost(0) = cost[0]
+
+
+                                    Bottom up
+            
+        Main Goal - rewrite our solution from recursive to iterative solution, from bottom to top.
+
+
+
+
+                                            minCost(4)
+                                          /            \
+                                        /               \
+                cost[4] + min(minCost3)                 minCost(2)
+                            /       \                       /       \
+                           /         \                     /         \
+                    minCost(2), minCost(1)             minCost(1), minCost(0)
+                                            
+
+
+        So:
+
+        minCost(4) = cost[4] + min(minCost(3), minCost(2))
+        minCost(3) = cost[3] + min(minCost(2), minCost(1))
+        minCost(2) = cost[2] + min(minCost(1), minCost(0))
+        minCost(1) = cost[1]
+        minCost(1) = cost[0]
+
+
+
+
 */

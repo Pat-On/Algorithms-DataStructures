@@ -12,6 +12,8 @@ minCost(1) = cost[1];
 
 T: O(2^n)
 S: O(n)
+
+// top down approach
 */
 
 const longArray = require("./crazyBigArray");
