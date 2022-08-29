@@ -155,5 +155,18 @@ Boundaries - base case
 
     ------------------------ Step 2 Memoization ------------------------  
 
+    Repetition is contained within k.
+    if starting point is the same, repetition of further moves is going to be the same.
+    <---- interesting ---->
+
+
+
+
+
+
+
+
+
+
 
 */
