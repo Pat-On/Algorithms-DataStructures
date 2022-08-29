@@ -162,11 +162,39 @@ Boundaries - base case
 
 
 
+    ------------------------ Step 3 Figuring out the logic for bottom up solution ------------------------  
+            Can be called tabulation 
+            It is iterative solution
+   
 
 
+    
+                        0  1  2  3  4  5
+                    0  __|OO|__|OO|__|__|           r = 2
+                    1  OO|__|__|__|OO|__|           c = 2
+                    2  __|__|XX|__|__|__|
+    N = 6           3  OO|__|__|__|OO|__|
+                    4  __|OO|__|OO|__|__|           
+    k = 2           5  __|__|__|__|__|__|   
 
 
+It is done base on:
+    - what you are storing in dp (memoization)
+        + recursion
+
+    k - movements
+    r - x
+    c - y
 
 
+    k - is driving entire logic here!
+
+
+    So iteration would go "up-side-down" to the recursion
+
+        check screenshot visualizationTabulation.png
+
+
+    At the end you have to add all variables from graph
 
 */
