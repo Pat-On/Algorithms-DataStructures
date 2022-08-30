@@ -35,6 +35,45 @@
 
 
 
+--------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------- Backtracking Template -------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+
+If You need to all solution or all valid solution or one working solution <-- it mean backtracking could be possible option to you
+
+Backtracking
+
+    Brute force solution - we are going to compute all solutions, there are no optimizations
+
+    Recursive
+
+
+Check img: sudokuBoard.png
+
+    requirements:
+        unique 1-9 in rows
+        unique 1-9 in cols
+        unique 1-9 in 3x3
+
+
+
+--------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------- Applying Backtracking Template ----------------------------------------------
+----------------------------------------------- To Sudoku Solver Logic----------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------
+
+args position - next grid cell
+ans - one of the colored squares
+
+recursion func(args, ans){                      <----- THIS IS SUPER BRUTAL!
+    for (1-9) {                 // add
+        ans.push(currentVal)
+    }
+    if (isValid()) {            // decision - is it valid selection?
+        recursion func(args, ans)   <-- this might be later broken so we would have to backtrack
+    }
+    remove currentVal from ans  // removal
+}
 
 
 */
