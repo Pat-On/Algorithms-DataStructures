@@ -6,6 +6,10 @@ class TrieNode {
   }
 }
 
+// t O(l) <-- length of the word
+// s O(n)
+// stack base recursion - O(l)
+
 class Trie {
   constructor() {
     this.root = new TrieNode();
