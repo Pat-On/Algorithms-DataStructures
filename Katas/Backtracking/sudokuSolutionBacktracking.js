@@ -21,7 +21,7 @@ const isValid = function (box, row, col, num) {
 // T O(9!) for a row x ( for entire boards )
 // time (backtracking)  O((9!)^9)
 
-// Space 0(81) - numbers of row and columns  so o(1)
+// Space 0(81) - numbers of row and columns  so oz(1)
 
 // the most difficult part was to find constraints - validity     <--- always think about process and break problem down!
 const solveBacktrack = function (board, boxes, rows, cols, r, c) {
