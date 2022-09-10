@@ -1,7 +1,5 @@
 const breaker = require("../breaker_line")();
 
-breaker();
-
 /*
 
             HARD ONE! 
@@ -71,10 +69,9 @@ function matrix(n) {
 
   return results;
 }
-
+breaker();
 console.log(matrix(2));
 console.log(matrix(5));
-breaker();
 
 function matrixRec(n, tail = 0) {
   if (n === 1) return [[tail + 1]];
@@ -106,7 +103,7 @@ function matrixRec(n, tail = 0) {
     [...Array(n)].map((v, index) => tail + 3 * (n - 1) + 1 - index),
   ];
 }
-
+breaker();
 console.log(matrixRec(2));
 console.log(matrixRec(5));
 
@@ -157,7 +154,7 @@ function matrixWalk(n) {
   }
   return spiral;
 }
-
+breaker();
 console.log(matrixWalk(2));
 console.log(matrixWalk(5));
 
@@ -187,6 +184,6 @@ function matrixCircle(n) {
 
   return result;
 }
-
+breaker();
 console.log(matrixCircle(2));
 console.log(matrixCircle(5));
