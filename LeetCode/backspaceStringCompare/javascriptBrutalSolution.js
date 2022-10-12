@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/backspace-string-compare/
+
 const stringToArray = function (str) {
   let backspaceCount = 0;
   let arr = [];
