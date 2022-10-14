@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/backspace-string-compare/
-import array
+from array import array
 
 
 def stringToArray(s: str) -> array:
