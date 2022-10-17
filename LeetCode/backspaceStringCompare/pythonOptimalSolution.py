@@ -1,8 +1,5 @@
 # https://leetcode.com/problems/backspace-string-compare/
 
-from pickle import FALSE
-from sndhdr import whathdr
-
 
 def backspaceCompare(s: str, t: str) -> bool:
     pointerS = len(s) - 1
